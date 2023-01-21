@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
-import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
-import io.github.resilience4j.retry.annotation.Retry;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 
 @RestController
 @RequestMapping("/a")
@@ -38,6 +37,22 @@ public class ServiceAController {
 
 //	@GetMapping
 //	@RateLimiter(name = SERVICE, fallbackMethod = "serviceAFallBackMet")
+//	public String serviceA() {
+//		System.out.println("Service A Controller");
+//		return restTemplate.getForObject(BASE_URL, String.class);
+//
+//	}
+	
+//	@GetMapping
+//	@Bulkhead(name = SERVICE, fallbackMethod = "serviceAFallBackMet")
+//	public String serviceA() {
+//		System.out.println("Service A Controller");
+//		return restTemplate.getForObject(BASE_URL, String.class);
+//
+//	}
+
+//	@GetMapping
+//	@TimeLimiter(name = SERVICE, fallbackMethod = "serviceAFallBackMet")
 //	public String serviceA() {
 //		System.out.println("Service A Controller");
 //		return restTemplate.getForObject(BASE_URL, String.class);
