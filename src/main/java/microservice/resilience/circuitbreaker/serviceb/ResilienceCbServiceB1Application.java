@@ -17,4 +17,8 @@ public class ResilienceCbServiceB1Application {
 		return new RestTemplate();
 	}
 
+	
+//	http://localhost:8081/b
+//		http://localhost:8080/a
+//		http://localhost:8080/actuator/health
 }
